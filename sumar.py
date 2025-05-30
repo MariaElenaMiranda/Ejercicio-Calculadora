@@ -1,3 +1,3 @@
-def sumar (num1:int | float, num2:int | float) -> int | float:
+def sumar (num1:int | float, num2:int | float) -> None:
     resultado = num1 + num2
-    return resultado
+    print(f"Resultado: {num1} + {num2} = {resultado}")
