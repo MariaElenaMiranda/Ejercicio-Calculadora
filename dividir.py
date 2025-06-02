@@ -1,7 +1,9 @@
-def dividir (num1:int | float, num2:int | float) -> None:
-    if num2 == 0:
-        print(f"Error: No puedes dividir por cero")
-        return
-    else:
-        resultado = num1 / num2
-        print(f"Resultado: {num1} * {num2} = {resultado}")
+def dividir (*arg:int | float) -> int | float:
+    try:
+        resultado = arg[0]
+        for num in arg[1:]:
+            resultado /= num
+        return resultado
+    except ZeroDivisionError:
+        print("Error: No puedes dividir por cero")
+        return None

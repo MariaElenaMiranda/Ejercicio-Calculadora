@@ -1,3 +1,5 @@
-def restar(num1:int | float, num2:int | float) -> None:
-    resultado = num1 - num2
-    print(f"Resultado: {num1} - {num2} = {resultado}")
+def restar(*arg:int | float) -> int | float:
+    resultado = arg[0]
+    for num in arg[1:]:
+        resultado -= num
+    return resultado
